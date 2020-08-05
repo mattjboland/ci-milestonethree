@@ -2,12 +2,12 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for recipe in recipes %}
-        {{recipe.recipe_title}}
-        {{recipe.recipe_description}}
-        {{recipe.recipe_method}}
-        {{recipe.recipe_ingredients}}
-        {{recipe.recipe_serves}}
-        {{recipe.recipe_cookingtime}}
-        {{recipe.recipe_preptime}}
+        {{recipe.recipe_title}}<br>
+        {{recipe.recipe_description}}<br>
+        {{recipe.recipe_method}}<br>
+        {{recipe.recipe_ingredients}}<br>
+        {{recipe.recipe_serves}}<br>
+        {{recipe.recipe_cookingtime}}<br>
+        {{recipe.recipe_preptime}}<br>
     {% endfor %}    
 {% endblock %}
