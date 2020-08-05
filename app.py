@@ -7,8 +7,9 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = 'online_cookbook'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-olf6t.mongodb.net/online_cookbook?retryWrites=true&w=majority'
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
