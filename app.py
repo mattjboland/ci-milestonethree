@@ -33,6 +33,11 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
     return render_template("register.html")
 
 
