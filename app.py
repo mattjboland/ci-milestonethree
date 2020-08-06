@@ -38,6 +38,11 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
+        mongo.db.users.find_one(register)
+
+        # put new user into a session cookie
+        session['user'] = request.form.get("username").lower()
+        flash("Registration Successful!")
     return render_template("register.html")
 
 
