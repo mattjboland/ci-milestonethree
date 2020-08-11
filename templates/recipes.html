@@ -16,6 +16,7 @@
                 <p>{{recipe.recipe_preptime}}</p>
                 <p>{{recipe.recipe_cookingtime}}</p>
                 <p>{{recipe.recipe_method}}</p>
+                <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
