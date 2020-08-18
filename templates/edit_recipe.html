@@ -103,10 +103,14 @@
             <!-- add cuisine -->
 		
 			<div class="input-field col s3">
-				<i class="fas fa-globe-europe prefix light-blue-text text-darken-4"></i>
-				<input id="recipe_cuisine" name="recipe_cuisine" minlength="4" maxlength="50"
-                        value="{{ recipe.recipe_cuisine }}" type="text" class="validate" required>
-				<label for="recipe_cuisine">Cuisine</label>
+				<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+			    <select id="cuisine_name" name="cuisine_name" class="validate" required>
+                    <option value="" disabled selected>Choose cuisine</option>
+                    {% for cuisine in cuisines %}
+                        <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="cuisine_name">Cuisine Category</label>
 			</div>
 		</div>
 
