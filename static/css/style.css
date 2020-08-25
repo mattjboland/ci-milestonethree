@@ -20,3 +20,32 @@ body {
     margin: 5px;
     line-height: 42px;
 }
+
+.page-footer i:hover {
+  color: rgb(0, 5, 100);
+}
+
+.page-footer {
+  min-height: 45px;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.copyright {
+  padding-top: 10px;
+}
+
+.social-icon {
+  margin: 10px;
+  color: white;
+  font-size: 1.7rem;
+}
+@media only screen and (max-width:320px){
+  .social-icon {
+  margin: 8px;
+  color: white;
+  font-size: 1.5rem;
+}
+}
