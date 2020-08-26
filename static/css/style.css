@@ -2,6 +2,9 @@
 
 body {
     font-family: 'Ribeye', cursive;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .text-shadow {
@@ -21,15 +24,17 @@ body {
     line-height: 42px;
 }
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
+
+/*-----  Confirmation Modal for Delete button -----*/
+
+.modal {
+    color: black;
+}
+
+/*----- Footer -----*/
 
 .page-footer i:hover {
   color: rgb(0, 5, 100);
@@ -59,3 +64,5 @@ body {
   font-size: 1.5rem;
 }
 }
+
+/*-----   -----*/
