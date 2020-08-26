@@ -3,6 +3,11 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('select').formSelect();
     $('.modal').modal();
+    $(function() {
+    $("#toggle").on('click', function() {   
+       $(".fa-caret-down").toggleClass("rotate");
+    });
+});
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
