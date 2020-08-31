@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
-@import "compass/css3";
 
 body {
     font-family: 'Ribeye', cursive;
@@ -17,10 +16,6 @@ body {
 }
 
 /*-----  -----*/
-
-.rotate {
-  @include transform(rotate(-90deg)); 
-}
 
 .btn-small {
     margin: 5px;
