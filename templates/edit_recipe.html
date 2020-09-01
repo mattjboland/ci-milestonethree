@@ -7,12 +7,12 @@
 <div class="row card-panel grey lighten-5">
 	<form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
 
-    <!-- choose category -->
+		<!-- choose category -->
 
-        <div class="row">
-		    <div class="input-field col s6">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-			    <select id="category_name" name="category_name" class="validate" required>
+		<div class="row">
+			<div class="input-field col s6">
+				<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+				<select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Choose your category</option>
                     {% for category in categories %}
                         {% if category.category_name == recipe.category_name %}
@@ -22,11 +22,11 @@
                         {% endif %}
                     {% endfor %}
                 </select>
-                <label for="category_name">Recipe Category</label>
-            </div>
-		
-            <!-- add title new recipe -->
-		
+				<label for="category_name">Recipe Category</label>
+			</div>
+
+			<!-- add title new recipe -->
+
 			<div class="input-field col s6">
 				<i class="fas fa-utensils prefix light-blue-text text-darken-4"></i>
 				<input id="recipe_title" name="recipe_title" minlength="5" maxlength="50"
@@ -35,44 +35,58 @@
 			</div>
 		</div>
 
-        <!-- add description -->
+		<!-- add description -->
 
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                <textarea id="recipe_description" name="recipe_description" minlength="5"
+				<textarea id="recipe_description" name="recipe_description" minlength="5"
                     maxlength="200" class="materialize-textarea validate" required>
                     {{- recipe.recipe_description -}}    
                 </textarea>
-                    <label for="recipe_description">Description</label>
+				<label for="recipe_description">Description</label>
 			</div>
 		</div>
 
-        <!-- add ingredients -->
+		<!-- add ingredients -->
 
 		<div class="row">
-			<div class="input-field col s6">
-				<i class="fas fa-pepper-hot prefix light-blue-text text-darken-4"></i>
-				<textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
-                    maxlength="200" class="materialize-textarea validate" required>
-                    {{- recipe.recipe_ingredients -}}    
-                </textarea>
-                    <label for="recipe_ingredients">Ingredients</label>
+			<div class="col s6">
+				<div class="card background">
+					<div class="card-content">
+						<span class="card-title">Ingredients</span>
+
+						<div class="addIngredient new-ingredient ingredient">
+							<div class="input-field whites-4">
+                            {{- recipe.recipe_ingredients -}} 
+								<input id="ingredients" type="text" placeholder="1 onion, diced"
+                                        name="ingredients[]" class="ingredients validate" minlength="1" maxlength="100" required>   
+							</div>
+						</div>
+
+						<!-- add button -->
+						<a id="add_ingredient"
+							class="btn waves-effect waves-light light-green"><i class="fas fa-plus"></i></a>
+						<!-- Remove button -->
+						<a id="remove_ingredient"
+							class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
+					</div>
+				</div>
 			</div>
-		
-            <!-- add method -->
-		
+
+			<!-- add method -->
+
 			<div class="input-field col s6">
 				<i class="fas fa-list-ol prefix light-blue-text text-darken-4"></i>
 				<textarea id="recipe_method" name="recipe_method" minlength="5"
                     maxlength="1000" class="materialize-textarea validate" required>
                     {{- recipe.recipe_method -}}    
                 </textarea>
-                    <label for="recipe_method">Method</label>
+				<label for="recipe_method">Method</label>
 			</div>
 		</div>
 
-        <!-- add serves -->
+		<!-- add serves -->
 
 		<div class="row">
 			<div class="input-field col s3">
@@ -81,54 +95,54 @@
                         value="{{ recipe.recipe_serves }}" type="text" class="validate" required>
 				<label for="recipe_serves">Serves</label>
 			</div>
-		
-            <!-- add cooking time -->
-		
+
+			<!-- add cooking time -->
+
 			<div class="input-field col s3">
 				<i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
 				<input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
                         value="{{ recipe.recipe_cookingtime }}" type="text" class="validate" required>
 				<label for="recipe_cookingtime">Cooking Time</label>
 			</div>
-		
-            <!-- add prep time -->
-		
+
+			<!-- add prep time -->
+
 			<div class="input-field col s3">
 				<i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
 				<input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
                         value="{{ recipe.recipe_preptime }}" type="text" class="validate" required>
 				<label for="recipe_preptime">Prep Time</label>
 			</div>
-		
-            <!-- add cuisine -->
-		
+
+			<!-- add cuisine -->
+
 			<div class="input-field col s3">
 				<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-			    <select id="cuisine_name" name="cuisine_name" class="validate" required>
+				<select id="cuisine_name" name="cuisine_name" class="validate" required>
                     <option value="" disabled selected>Choose cuisine</option>
                     {% for cuisine in cuisines %}
                         <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
                     {% endfor %}
                 </select>
-                <label for="cuisine_name">Cuisine Category</label>
+				<label for="cuisine_name">Cuisine Category</label>
 			</div>
 		</div>
 
-        <!-- add recipe button -->
+		<!-- add recipe button -->
 
-        <div class="row">
-            <div class="col s12 center-align">
+		<div class="row">
+			<div class="col s12 center-align">
 
-            <!-- cancel button -->
+				<!-- cancel button -->
 
-                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
-                    Cancel <i class="fas fa-times-circle right"></i>
-                </a>
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+				<a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
+					Cancel <i class="fas fa-times-circle right"></i>
+				</a>
+				<button type="submit" class="btn-large light-blue darken-1 text-shadow">
                     Edit Recipe <i class="fas fa-edit right"></i>
                 </button>
-            </div>
-        </div>
+			</div>
+		</div>
 	</form>
 </div>
 
