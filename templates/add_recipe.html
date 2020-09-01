@@ -45,22 +45,48 @@
         <!-- add ingredients -->
 
 		<div class="row">
-			<div class="input-field col s6">
-				<i class="fas fa-pepper-hot prefix light-blue-text text-darken-4"></i>
-				<textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
-                    maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="recipe_ingredients">Ingredients</label>
-			</div>
+                <div class="col s6">
+                    <div class="card background">
+                        <div class="card-content">
+                            <span class="card-title">Ingredients</span>
+
+                            <div class="addIngredient new-ingredient ingredient">
+                                <div class="input-field whites-4">
+                                    <input id="ingredients" type="text" placeholder="1 onion, diced"
+                                    name="ingredients[]" class="ingredients validate" minlength="1" maxlength="100" required>
+                                </div>
+                            </div>
+                            
+                            <!-- add button -->
+                            <a id="add_ingredient" class="btn waves-effect waves-light light-green"><i class="fas fa-plus"></i></a>
+                            <!-- Remove button -->
+                            <a id="remove_ingredient" class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
+                        </div>
+                    </div>
+                </div>
 		
             <!-- add method -->
 		
-			<div class="input-field col s6">
-				<i class="fas fa-list-ol prefix light-blue-text text-darken-4"></i>
-				<textarea id="recipe_method" name="recipe_method" minlength="5"
-                    maxlength="1000" class="materialize-textarea validate" required></textarea>
-                    <label for="recipe_method">Method</label>
-			</div>
-		</div>
+
+                <div class="col s6">
+                    <div class="card background">
+                        <div class="card-content">
+                            <span class="card-title">Method</span>
+                            
+                            <div class="addmethod method new-step">
+                                <div class="input-field whites-4">
+                                    <input id="method" type="text" placeholder="List method one per line" 
+                                    name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
+                                </div>
+                            </div>
+                            <!-- add button -->
+                            <a id="add_step" class="btn waves-effect waves-light light-green"><i class="fas fa-plus"></i></a>
+                           <!-- remove button -->
+                            <a id="remove_step" class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
 
         <!-- add serves -->
 
