@@ -49,7 +49,7 @@
             <div class="collapsible-body">
                 <strong>{{recipe.recipe_cuisine}}</strong>
                 <p>{{recipe.recipe_description}}</p>
-                <p>{{recipe.recipe_ingredients}}</p>
+                <p>{{recipe.recipe_ingredients|join(', ')}}</p>
                 <p>{{recipe.recipe_preptime}}</p>
                 <p>{{recipe.recipe_cookingtime}}</p>
                 <p>{{ recipe.recipe_method }}</p>
