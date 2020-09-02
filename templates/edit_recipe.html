@@ -60,7 +60,7 @@
 							<div class="input-field whites-4">
                             {{- recipe.recipe_ingredients -}} 
 								<input id="ingredients" type="text" placeholder="1 onion, diced"
-                                name="ingredients[]" class="ingredients validate" minlength="1" maxlength="100" required>   
+                                name="ingredients" class="ingredients validate" minlength="1" maxlength="100" required>   
 							</div>
 						</div>
 
@@ -81,14 +81,14 @@
 					<div class="card-content">
 						<span class="card-title">Method</span>
 
-						<div class="addIngredient new-ingredient ingredient">
+						<div class="addmethod method new-step">
 							<div class="input-field whites-4">
                             {{- recipe.recipe_method -}}  
                                 <input id="method" type="text" placeholder="List method one per line" 
-                                name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
+                                name="method"  class= "method validate" minlength="3" maxlength="600" required>
 			                </div>
 		                </div>
-                        <!-- edit button -->
+                        <!-- add button -->
                         <a id="add_step" class="btn waves-effect waves-light light-green"><i class="fas fa-plus"></i></a>
                         <!-- remove button -->
                         <a id="remove_step" class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
