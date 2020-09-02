@@ -60,7 +60,7 @@
 							<div class="input-field whites-4">
                             {{- recipe.recipe_ingredients -}} 
 								<input id="ingredients" type="text" placeholder="1 onion, diced"
-                                name="ingredients" class="ingredients validate" minlength="1" maxlength="100" required>   
+                                name="ingredients[]" class="ingredients validate" minlength="1" maxlength="100" required>  
 							</div>
 						</div>
 
@@ -85,7 +85,7 @@
 							<div class="input-field whites-4">
                             {{- recipe.recipe_method -}}  
                                 <input id="method" type="text" placeholder="List method one per line" 
-                                name="method"  class= "method validate" minlength="3" maxlength="600" required>
+                                name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
 			                </div>
 		                </div>
                         <!-- add button -->
