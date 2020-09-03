@@ -2,64 +2,75 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
+<h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
 
-        <div class="row card-panel grey-lighten-5">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <div class="row valign-wrapper center-align">
-                    <div class="input-field col s12 m8">
-                        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                        <label for="query">Search Recipes</label>
-                    </div>
-                    <div class="col s12 m4">
-                        <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">Reset</a>
-                        <button type="submit" class="light-blue darken-1 btn text-shadow">
+<div class="row card-panel grey-lighten-5">
+	<form action="{{ url_for('search') }}" method="post" class="col s12">
+		<div class="row valign-wrapper center-align">
+			<div class="input-field col s12 m8">
+				<i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+				<input type="text" name="query" id="query" minlength="3" class="validate" required>
+				<label for="query">Search Recipes</label>
+			</div>
+			<div class="col s12 m4">
+				<a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">Reset</a>
+				<button type="submit" class="light-blue darken-1 btn text-shadow">
                             <i class="fas fa-search left"></i> Search
                         </button>
-                    </div>
-                </div>
-            </form>
-        </div>
+			</div>
+		</div>
+	</form>
+</div>
 
-    {% if recipes|length > 0 %}
-    <ul class="collapsible popout">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
-            <i class="fas fa-caret-right icon-rotate"></i>
-                <div class="col s9 left-align">
-                    <strong>Recipe Title</strong> {{recipe.recipe_title}} : <strong>Serves</strong> {{recipe.recipe_serves}}
-                </div>
-                <div class="col s3">
-                    {% if session.user|lower == recipe.created_by|lower %}
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-                        <a href="#delete_recipe" class="btn-small red modal-trigger">Delete</a>
-                            <div id="delete_recipe" class="modal">
-                                <div class="modal-content center-align">
-                                    <h5>Do you want to delete this recipe?</h5>
-                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn btn red modal-close">Delete</a>
-                                    <a href="#" class="btn btn black modal-close">Cancel</a>
-                                </div>
-                            </div>
-                    {% endif %}
-                </div>
-                
-            </div>
-            <div class="collapsible-body">
-                <strong>{{recipe.recipe_cuisine}}</strong>
-                <p>{{recipe.recipe_description}}</p>
-                <p>{{recipe.recipe_ingredients|join(', ')}}</p>
-                <p>{{recipe.recipe_preptime}}</p>
-                <p>{{recipe.recipe_cookingtime}}</p>
-                <p>{{ recipe.recipe_method }}</p>
-                <p><em>by: {{ recipe.created_by }}</em></p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-        <h3 class="red-blue-text text-darken-4 center-align">No Results Found!</h3>
-    {% endif %}
-    
+{% if recipes|length > 0 %}
+<ul class="collapsible popout">
+	{% for recipe in recipes['items'] %}
+	<li>
+		<div class="collapsible-header white-text light-blue darken-4 text-shadow">
+			<i class="fas fa-caret-right icon-rotate"></i>
+			<div class="col s9 left-align">
+				<strong>Recipe Title</strong> {{recipe.recipe_title}} : <strong>Serves</strong> {{recipe.recipe_serves}}
+			</div>
+			<div class="col s3">
+				{% if session.user|lower == recipe.created_by|lower %}
+				<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+					class="btn-small light-blue lighten-1">Edit</a>
+				<a href="#delete_recipe" class="btn-small red modal-trigger">Delete</a>
+				<div id="delete_recipe" class="modal">
+					<div class="modal-content center-align">
+						<h5>Do you want to delete this recipe?</h5>
+						<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+							class="btn btn red modal-close">Delete</a>
+						<a href="#" class="btn btn black modal-close">Cancel</a>
+					</div>
+				</div>
+				{% endif %}
+			</div>
+
+		</div>
+		<div class="collapsible-body">
+			<strong>{{recipe.recipe_cuisine}}</strong>
+			<p>{{recipe.recipe_description}}</p>
+			<p>{{recipe.recipe_ingredients|join(', ')}}</p>
+			<p>{{recipe.recipe_preptime}}</p>
+			<p>{{recipe.recipe_cookingtime}}</p>
+			<p>{{ recipe.recipe_method }}</p>
+			
+				<ul class="collection width-header">
+                <li class="collection-header"><h4>Method</h4></li>
+                {% for item in recipe.recipe_method %}
+   
+					<li class="collection-item">{{ item }}</li>
+					 {% endfor %}
+				</ul>
+			
+			<p><em>by: {{ recipe.created_by }}</em></p>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+<h3 class="red-blue-text text-darken-4 center-align">No Results Found!</h3>
+{% endif %}
+
 {% endblock %}
