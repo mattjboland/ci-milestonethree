@@ -92,7 +92,8 @@ def get_paginated_list(entity, query={}, **params):
 @app.route('/')
 @app.route('/get_recipes', methods=['GET'])
 def get_recipes():
-    paginated_recipes = get_paginated_list(mongo.db.recipes, **request.args.to_dict())
+    paginated_recipes = get_paginated_list(
+        mongo.db.recipes, **request.args.to_dict())
     return render_template(
         "recipes.html", recipes=paginated_recipes)
 
@@ -101,7 +102,8 @@ def get_recipes():
 def search():
     query = request.form.get("query")
     return render_template(
-        "recipes.html", recipes=list(mongo.db.recipe.find({"$text": {"$search": query}})))
+        "recipes.html", recipes=list(
+            mongo.db.recipe.find({"$text": {"$search": query}})))
 
 
 @app.route('/register', methods=['GET', 'POST'])
