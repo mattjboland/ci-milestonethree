@@ -2,6 +2,32 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<h3 class="light-blue-text text-darken-4 center-align">Welcome to the Online Cookbook App</h3>
+
+<p class="black-text text-darken-4 center-align">This is a web application that allows you to add your own recipes
+    into various categories, have them stored and easily accessed, edited and deleted.</p>
+
+<h4 class="light-blue-text text-darken-4 center-align">How does it work?</h4>
+
+<section class="section-container description black-text">
+    <div class="row center">
+        <div class="col s12 m4">
+            <h5>1. Submit</h5>
+            <p>Submit your own recipe in an app that will store it for you. Save all your recipes in an easy location
+            and be able to edit and delete your recipes as necessary!</p>
+        </div>
+        <div class="col s12 m4">
+            <h5>2. Search</h5>
+            <p>Search all recipes to find some inspiration from others who have also shared recipes!</p>
+        </div>
+        <div class="col s12 m4">
+            <h5>3. Sign Up!!!</h5>
+            <p>Sign Up! Register here to set up your account and get started!
+            <a href="{{ url_for('register') }}" class="light-blue-text text-darken-4">Log In</a></p>
+        </div>
+    </div>
+</section>
+
 <h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
 
 <div class="row card-panel grey-lighten-5">
