@@ -50,13 +50,9 @@
 		</div>
 		<div class="collapsible-body">
 
-                <p class="collection width-header">
-                <p class="collection-header"><h5>Description</h5></p>
-                {% for item in recipe.recipe_description %}
+                <p><h5>Description</h5></p>
 					<p>{{ recipe.recipe_description }}</p>
-			    {% endfor %}
-				</p>
-			
+			    			
                 <ul class="collection width-header">
                 <li class="collection-header"><h5>Ingredients</h5></li>
                 {% for item in recipe.recipe_ingredients %}
@@ -78,19 +74,11 @@
 			    {% endfor %}
 				</ul>
 			
-                <ul class="collection width-header">
-                <li class="collection-header"><h6>Preparation Time</h6></li>
-                {% for item in recipe.recipe_preptime %}
-					<li class="collection-item">{{ item }}</li>
-			    {% endfor %}
-				</ul>
+                <p><h6>Preparation Time</h6></p>
+					<p>{{ recipe.recipe_preptime }}</p>
 			
-                <ul class="collection width-header">
-                <li class="collection-header"><h6>Cooking Time</h6></li>
-                {% for item in recipe.recipe_cookingtime %}
-					<li class="collection-item">{{ item }}</li>
-			    {% endfor %}
-				</ul>
+                <p><h6>Cooking Time</h6></p>
+					<p>{{ recipe.recipe_cookingtime }}</p>
 			
 			<p><em>by: {{ recipe.created_by }}</em></p>
 
