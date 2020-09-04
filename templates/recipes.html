@@ -52,18 +52,21 @@
 			<strong>{{recipe.recipe_cuisine}}</strong>
 			<p>{{recipe.recipe_description}}</p>
 			<p>{{recipe.recipe_ingredients|join(', ')}}</p>
-			<p>{{recipe.recipe_preptime}}</p>
-			<p>{{recipe.recipe_cookingtime}}</p>
-			<p>{{ recipe.recipe_method }}</p>
-			
-				<ul class="collection width-header">
-                <li class="collection-header"><h4>Method</h4></li>
-                {% for item in recipe.recipe_method %}
-   
+                <ul class="collection width-header">
+                <li class="collection-header"><h4>Ingredients</h4></li>
+                {% for item in recipe.recipe_ingredients %}
 					<li class="collection-item">{{ item }}</li>
 					 {% endfor %}
 				</ul>
-			
+			<p>{{recipe.recipe_preptime}}</p>
+			<p>{{recipe.recipe_cookingtime}}</p>
+			<p>{{ recipe.recipe_method }}</p>
+				<ul class="collection width-header">
+                <li class="collection-header"><h4>Method</h4></li>
+                {% for item in recipe.recipe_method %}
+					<li class="collection-item">{{ item }}</li>
+					 {% endfor %}
+				</ul>
 			<p><em>by: {{ recipe.created_by }}</em></p>
 		</div>
 	</li>
