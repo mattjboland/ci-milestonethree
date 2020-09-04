@@ -93,7 +93,7 @@ def get_paginated_list(entity, query={}, **params):
 @app.route('/get_recipes', methods=['GET'])
 def get_recipes():
     paginated_recipes = get_paginated_list(
-        mongo.db.recipes, **request.args.to_dict())
+        mongo.db.recipe, **request.args.to_dict())
     return render_template(
         "recipes.html", recipes=paginated_recipes)
 
