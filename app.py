@@ -182,6 +182,7 @@ def add_recipe():
     if request.method == "POST":
         recipe = {
             "category_name": request.form.get("category_name"),
+            "allergen_name": request.form.getlist("allergen_name"),
             "recipe_title": request.form.get("recipe_title"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_method": request.form.getlist("method[]"),
@@ -208,6 +209,7 @@ def edit_recipe(recipe_id):
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
+            "allergen_name": request.form.getlist("allergen_name"),
             "recipe_title": request.form.get("recipe_title"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_method": request.form.getlist("method[]"),
