@@ -33,7 +33,11 @@
 				    <select id="allergen_name" name="allergen_name" class="validate" required>
                         <option value="" disabled selected>Select Allergens if any</option>
                             {% for allergen in allergens %}
-                                <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}</option>
+                                {% if allergen.allergen_name == recipe.allergen_name %}
+                                    <option value="{{ allergen.allergen_name }}" selected>{{ allergen.allergen_name }}</option>
+                                {% else %}
+                                    <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}</option>
+                                {% endif %}
                             {% endfor %}
                     </select>
 				    <label for="allergen_name">Allergens</label>
@@ -149,7 +153,11 @@
 					<select id="cuisine_name" name="cuisine_name" class="validate" required>
                         <option value="" disabled selected>Choose cuisine</option>
                             {% for cuisine in cuisines %}
-                                <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                                {% if cuisine.cuisine_name == recipe.cuisine_name %}
+                                    <option value="{{ cuisine.cuisine_name }}" selected>{{ cuisine.cuisine_name }}</option>
+                                {% else %}    
+                                    <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                                {% endif %}
                             {% endfor %}
                     </select>
 					<label for="cuisine_name">Cuisine Category</label>
