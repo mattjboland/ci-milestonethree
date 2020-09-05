@@ -27,11 +27,11 @@
 				<div class="input-field col s6">
 					<i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
 					<select id="allergen_name" name="allergen_name" class="validate" required>
-                    <option value="" disabled selected>Select Allergens if any</option>
-                    {% for allergen in allergens %}
-                        <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}</option>
-                    {% endfor %}
-                </select>
+                        <option value="" disabled selected>Select Allergens if any</option>
+                        {% for allergen in allergens %}
+                            <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}</option>
+                        {% endfor %}
+                    </select>
 					<label for="allergen_name">Allergens</label>
 				</div>
 			</div>
@@ -86,80 +86,80 @@
 
 				<!-- add method -->
 
-
 				<div class="col s6">
 					<div class="card background">
 						<div class="card-content">
 							<span class="card-title">Method</span>
-
-							<div class="addmethod method new-step">
-								<div class="input-field whites-4">
-									<input id="method" type="text" placeholder="List method one per line"
-                                    name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
-                                </div>
+                                <div class="addmethod method new-step">
+								    <div class="input-field whites-4">
+									    <input id="method" type="text" placeholder="List method one per line"
+                                        name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
+                                    </div>
 								</div>
+
 								<!-- add button -->
 								<a id="add_step"
 									class="btn waves-effect waves-light light-green"><i class="fas fa-plus"></i></a>
 								<!-- remove button -->
 								<a id="remove_step"
 									class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
-							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- add serves -->
+			<!-- add serves -->
 
-				<div class="row">
-					<div class="input-field col s3">
-						<i class="fas fa-sort-numeric-down prefix light-blue-text text-darken-4"></i>
-						<input id="recipe_serves" name="recipe_serves" minlength="1" maxlength="3"
+			<div class="row">
+				<div class="input-field col s3">
+					<i class="fas fa-sort-numeric-down prefix light-blue-text text-darken-4"></i>
+					<input id="recipe_serves" name="recipe_serves" minlength="1" maxlength="3"
                         type="text" class="validate" required>
-						<label for="recipe_serves">Serves</label>
-					</div>
-
-					<!-- add cooking time -->
-
-					<div class="input-field col s3">
-						<i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
-						<input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
-                        type="text" class="validate" required>
-						<label for="recipe_cookingtime">Cooking Time</label>
-					</div>
-
-					<!-- add prep time -->
-
-					<div class="input-field col s3">
-						<i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
-						<input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
-                        type="text" class="validate" required>
-						<label for="recipe_preptime">Prep Time</label>
-					</div>
-
-					<!-- add cuisine -->
-
-					<div class="input-field col s3">
-						<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-						<select id="cuisine_name" name="cuisine_name" class="validate" required>
-                    <option value="" disabled selected>Choose cuisine</option>
-                    {% for cuisine in cuisines %}
-                        <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
-                    {% endfor %}
-                </select>
-						<label for="cuisine_name">Cuisine Category</label>
-					</div>
+					<label for="recipe_serves">Serves</label>
 				</div>
 
-				<!-- add recipe button -->
+				<!-- add cooking time -->
 
-				<div class="row">
-					<div class="col s12 center-align">
-						<button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                    Add Recipe <i class="fas fa-plus-square right"></i>
-                </button>
-					</div>
+				<div class="input-field col s3">
+					<i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
+					<input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
+                        type="text" class="validate" required>
+					<label for="recipe_cookingtime">Cooking Time</label>
 				</div>
+
+				<!-- add prep time -->
+
+				<div class="input-field col s3">
+					<i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
+					<input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
+                        type="text" class="validate" required>
+					<label for="recipe_preptime">Prep Time</label>
+				</div>
+
+				<!-- add cuisine -->
+
+				<div class="input-field col s3">
+					<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+					<select id="cuisine_name" name="cuisine_name" class="validate" required>
+                        <option value="" disabled selected>Choose cuisine</option>
+                            {% for cuisine in cuisines %}
+                                <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                            {% endfor %}
+                    </select>
+			    	<label for="cuisine_name">Cuisine Category</label>
+				</div>
+			</div>
+
+			<!-- add recipe button -->
+
+			<div class="row">
+				<div class="col s12 center-align">
+					<button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                        Add Recipe <i class="fas fa-plus-square right"></i>
+                    </button>
+				</div>
+			</div>
+            
 	</form>
 </div>
 
