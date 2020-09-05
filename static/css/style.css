@@ -8,7 +8,7 @@ body {
 }
 
 #bg {
-  position: absolute; 
+  position: absolute;
   top: 0; 
   left: 0; 
   min-width: 100%;
@@ -49,32 +49,32 @@ main {
 /*----- Footer -----*/
 
 .page-footer i:hover {
-  color: rgb(0, 5, 100);
+    color: rgb(0, 5, 100);
 }
 
 .page-footer {
-  min-height: 45px;
-  bottom: 0;
+    position: relative;
+    bottom:  0px;
 }
 
 .footer-content {
-  display: flex;
+    display: flex;
 }
 
 .copyright {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 .social-icon {
-  margin: 10px;
-  color: white;
-  font-size: 1.7rem;
+    margin: 10px;
+    color: white;
+    font-size: 1.7rem;
 }
 @media only screen and (max-width:320px){
-  .social-icon {
-  margin: 8px;
-  color: white;
-  font-size: 1.5rem;
+.social-icon {
+    margin: 8px;
+    color: white;
+    font-size: 1.5rem;
 }
 }
 
