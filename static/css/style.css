@@ -11,8 +11,6 @@ body {
   position: absolute; 
   top: 0; 
   left: 0; 
-	
-  /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
   opacity: 30%;
@@ -56,6 +54,7 @@ main {
 
 .page-footer {
   min-height: 45px;
+  bottom: 0;
 }
 
 .footer-content {
