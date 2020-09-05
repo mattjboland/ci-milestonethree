@@ -115,71 +115,71 @@
 							<!-- remove button -->
 							<a id="remove_step"
 								class="btn waves-effect waves-light red lighten-2"><i class="fas fa-minus"></i></a>
-						</div>
 					</div>
 				</div>
+			</div>
+        </div>
+
+		<!-- add serves -->
+
+		<div class="row">
+			<div class="input-field col s3">
+				<i class="fas fa-sort-numeric-down prefix light-blue-text text-darken-4"></i>
+				<input id="recipe_serves" name="recipe_serves" minlength="1" maxlength="3"
+                    value="{{ recipe.recipe_serves }}" type="text" class="validate" required>
+				<label for="recipe_serves">Serves</label>
+			</div>
+
+			<!-- add cooking time -->
+
+			<div class="input-field col s3">
+				<i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
+				<input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
+                    value="{{ recipe.recipe_cookingtime }}" type="text" class="validate" required>
+				<label for="recipe_cookingtime">Cooking Time</label>
+			</div>
+
+			<!-- add prep time -->
+
+			<div class="input-field col s3">
+			    <i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
+				<input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
+                    value="{{ recipe.recipe_preptime }}" type="text" class="validate" required>
+				<label for="recipe_preptime">Prep Time</label>
+			</div>
+
+	    	<!-- add cuisine -->
+
+			<div class="input-field col s3">
+				<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+				<select id="cuisine_name" name="cuisine_name" class="validate" required>
+                    <option value="" disabled selected>Choose cuisine</option>
+                        {% for cuisine in cuisines %}
+                            {% if cuisine.cuisine_name == recipe.cuisine_name %}
+                                <option value="{{ cuisine.cuisine_name }}" selected>{{ cuisine.cuisine_name }}</option>
+                            {% else %}    
+                                <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                </select>
+				<label for="cuisine_name">Cuisine Category</label>
             </div>
+		</div>
 
-			<!-- add serves -->
-            
-			<div class="row">
-				<div class="input-field col s3">
-					<i class="fas fa-sort-numeric-down prefix light-blue-text text-darken-4"></i>
-					<input id="recipe_serves" name="recipe_serves" minlength="1" maxlength="3"
-                        value="{{ recipe.recipe_serves }}" type="text" class="validate" required>
-					<label for="recipe_serves">Serves</label>
-				</div>
+		<!-- add recipe button -->
 
-				<!-- add cooking time -->
+		<div class="row">
+			<div class="col s12 center-align">
 
-				<div class="input-field col s3">
-					<i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
-					<input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
-                        value="{{ recipe.recipe_cookingtime }}" type="text" class="validate" required>
-					<label for="recipe_cookingtime">Cooking Time</label>
-				</div>
+				<!-- cancel button -->
 
-				<!-- add prep time -->
-
-				<div class="input-field col s3">
-			    	<i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
-					<input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
-                        value="{{ recipe.recipe_preptime }}" type="text" class="validate" required>
-					<label for="recipe_preptime">Prep Time</label>
-				</div>
-
-				<!-- add cuisine -->
-
-				<div class="input-field col s3">
-					<i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-					<select id="cuisine_name" name="cuisine_name" class="validate" required>
-                        <option value="" disabled selected>Choose cuisine</option>
-                            {% for cuisine in cuisines %}
-                                {% if cuisine.cuisine_name == recipe.cuisine_name %}
-                                    <option value="{{ cuisine.cuisine_name }}" selected>{{ cuisine.cuisine_name }}</option>
-                                {% else %}    
-                                    <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
-                                {% endif %}
-                            {% endfor %}
-                    </select>
-					<label for="cuisine_name">Cuisine Category</label>
-				</div>
-			</div>
-
-			<!-- add recipe button -->
-
-			<div class="row">
-				<div class="col s12 center-align">
-
-				    <!-- cancel button -->
-
-					<a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
-						Cancel <i class="fas fa-times-circle right"></i></a>
-					<button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                        Edit Recipe <i class="fas fa-edit right"></i>
-                    </button>
-				</div>
-			</div>
+				<a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
+					Cancel <i class="fas fa-times-circle right"></i></a>
+				<button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Edit Recipe <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+		</div>
 
 	</form>
 </div>
