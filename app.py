@@ -203,7 +203,7 @@ def add_recipe():
 
     allergens = mongo.db.allergens.find().sort("allergen_name", 1)
     return render_template("add_recipe.html", categories=categories,
-                           cuisines=cuisines, allergen=allergens)
+                           cuisines=cuisines, allergens=allergens)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -234,7 +234,7 @@ def edit_recipe(recipe_id):
     allergens = mongo.db.allergens.find().sort("allergen_name", 1)
     return render_template("edit_recipe.html", recipe=recipe,
                            categories=categories, cuisines=cuisines,
-                           allergen=allergens)
+                           allergens=allergens)
 
 
 @app.route("/delete_recipe/<recipe_id>")
