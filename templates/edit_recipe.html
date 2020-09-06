@@ -29,7 +29,7 @@
 		<div class="row">
 		    <div class="input-field col s6">
 			    <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-				<select id="allergen_name" name="allergen_name" class="validate">
+				<select id="allergen_name" name="allergen_name" class="validate" required>
                     <option value="" disabled selected>Select Allergens if any</option>
                         {% for allergens in allergens %}
                             {% if allergens.allergen_name == recipe.allergen_name %}
