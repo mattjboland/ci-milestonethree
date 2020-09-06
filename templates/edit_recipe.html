@@ -77,9 +77,10 @@
 
 						<div class="addIngredient new-ingredient ingredient">
 							<div class="input-field whites-4">
-								{{- recipe.recipe_ingredients -}}
-								<input id="ingredients" type="text" placeholder="1 onion, diced"
-                                name="ingredients[]" class="ingredients validate" minlength="1" maxlength="100" required>
+								{% for ingredient in recipe.recipe_ingredients %}
+								<input id="ingredients" type="text" placeholder="1 onion, diced" value="{{ingredient}}"
+                                name="recipe_ingredients" class="ingredients validate" minlength="1" maxlength="100" required>
+                                {% endfor %}
 							</div>
 						</div>
 
@@ -101,10 +102,11 @@
 						<span class="card-title">Method</span>
                             <div class="addmethod method new-step">
 								<div class="input-field whites-4">
-									{{- recipe.recipe_method -}}
-									<input id="method" type="text" placeholder="List method one per line"
+                                {% for method in recipe.recipe_method %}
+									<input id="method" type="text" placeholder="List method one per line" value="{{method}}"
                                     name="method[]"  class= "method validate" minlength="3" maxlength="600" required>
-			                    </div>
+                                     {% endfor %}
+                                </div>
 							</div>
 
 							<!-- add button -->
