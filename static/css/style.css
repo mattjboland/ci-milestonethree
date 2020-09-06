@@ -52,9 +52,10 @@ main {
     color: rgb(0, 5, 100);
 }
 
-.page-footer {
+#page-footer {
     position: relative;
-    bottom:  0px;
+    bottom: 0;
+    height: 5rem;
 }
 
 .footer-content {
@@ -62,11 +63,14 @@ main {
 }
 
 .copyright {
-    padding-top: 10px;
+    padding-top: 20px;
+    margin: 5px;
+    color: white;
 }
 
 .social-icon {
-    margin: 10px;
+    padding-top: 20px;
+    margin: 5px;
     color: white;
     font-size: 1.7rem;
 }
