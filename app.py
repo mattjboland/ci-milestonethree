@@ -102,7 +102,7 @@ def get_recipes():
 def search():
     query = request.form.get("query")
     return render_template(
-        "recipes.html", recipes=list(
+        "recipes.html", recipe=list(
             mongo.db.recipe.find({"$text": {"$search": query}})))
 
 
