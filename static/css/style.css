@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
 
+/*----- Main body with Ribeye font imported -----*/
+
 body {
     font-family: 'Ribeye', cursive;
     display: flex;
@@ -7,23 +9,35 @@ body {
     flex-direction: column;
 }
 
+/*----- Backgound image -----*/
+
 #bg {
     position: absolute;
     width: 100%;
-    background-image: repeat;
+    min-height: 200vh;
     opacity: 30%;
     z-index: -1;
+
 }
+
+/*----- Adding text shadow to headers -----*/
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/*----- Flashed messages -----*/
+
 .flashes h4 {
     line-height: 2;
 }
 
-/*-----  -----*/
+/*----- Collapsible for displaying recipes -----*/
+
+#collapsible {
+    position: relative;
+    z-index: 0;
+}
 
 .btn-small {
     margin: 5px;
