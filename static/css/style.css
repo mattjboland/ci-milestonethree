@@ -7,6 +7,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-repeat: repeat-y;
 }
 
 /*----- Backgound image -----*/
@@ -17,7 +18,6 @@ body {
     min-height: 100vh;
     opacity: 30%;
     z-index: -1;
-
 }
 
 /*----- Adding text shadow to headers -----*/

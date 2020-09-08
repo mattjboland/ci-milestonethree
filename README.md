@@ -80,5 +80,72 @@ perfect for my project. I found it very difficult to understand sometimes but wi
 I  was able to improve my understanding. I still feel I could use some more learning and I have every intention to do 
 so at a later stage.
 
-I built up my collections in MongoDB and have listed them below
+I built up my collections in MongoDB and have listed them below.
 
+## Categories
+
+    _id: ObjectId("")                   _id: ObjectId("")
+    category_name: "Starter"            category_name: "Main Course"
+
+    _id: ObjectId("")                   _id: ObjectId("")
+    category_name: "Dessert"            category_name: "Snack"
+
+## Cuisines
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "American"            cuisine_name: "British"             cuisine_name: "Caribbean"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "Chinese"             cuisine_name: "French"              cuisine_name: "Greek"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "Indian"              cuisine_name: "Italian"             cuisine_name: "Japanese"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "Mediterranean"       cuisine_name: "Mexican"             cuisine_name: "Moroccan"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "Spanish"             cuisine_name: "Thai"                cuisine_name: "Turkish"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    cuisine_name: "Vietnamese"          cuisine_name: "Fusion"              cuisine_name: "Vegan"
+
+    _id: ObjectId("")
+    cuisine_name: "Vegetarian"
+
+## Recipes
+
+    _id: ObjectId("")
+    recipe_title: "title" <string>
+    recipe_description: "description" <string>
+    recipe_method: "method" <array>
+    recipe_ingredients: "ingredients" <array>
+    recipe_serves: "serves" <string>
+    recipe_cookingtime: "cookingtime" <string>
+    recipe_preptime: "preptime" <string>
+    recipe_cuisine: "cuisine" <array>
+
+## Users
+
+    _id: ObjectId("")
+    username: ""
+    password: ""
+
+## Allergens
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    allergen_name: "Cereals.. Gluten"   allergen_name: "Crustaceans"        allergen_name: "Eggs"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    allergen_name: "Fish"               allergen_name: "Peanuts"            allergen_name: "Soya"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    allergen_name: "Milk"               allergen_name: "Nuts"               allergen_name: "Celery"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    allergen_name: "Mustard"            allergen_name: "Sesame Seeds"       allergen_name: "Sulphur Dioxide and Sulphites"
+
+    _id: ObjectId("")                   _id: ObjectId("")                   _id: ObjectId("")
+    allergen_name: "Lupin"              allergen_name: "Molluscs            allergen_name: "None"
+
+    
