@@ -12,13 +12,7 @@ body {
 
 /*----- Backgound image -----*/
 
-#bg {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    opacity: 30%;
-    z-index: -1;
-}
+
 
 /*----- Adding text shadow to headers -----*/
 
