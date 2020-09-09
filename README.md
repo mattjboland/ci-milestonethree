@@ -304,6 +304,8 @@ I built up my collections in MongoDB and have listed them below.
     Recipe. These are all working as they should and have no issues. I have also asked some friends to check the
     app too and all have been able to use the app easily with no issues.
 
+### Issues and Bugs
+
 ## Deployment
 
 ## Credits

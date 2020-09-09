@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 {% extends 'base.html' %}
-{% block content %}
+{% import 'components.html' as components %}
 
+{% block content %}
 <h3 class="light-blue-text text-darken-4 center-align">Welcome to the Online Cookbook App</h3>
 
 <p class="black-text text-darken-4 center-align">This is a web application that allows you to add your own recipes
@@ -31,11 +31,11 @@
 <h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
 
 <div class="row card-panel grey-lighten-5">
-	<form action="{{ url_for('search') }}" method="post" class="col s12">
+	<form action="{{ url_for('get_recipes') }}" method="POST" class="col s12">
 		<div class="row valign-wrapper center-align">
 			<div class="input-field col s12 m8">
 				<i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-				<input type="text" name="query" id="query" minlength="3" class="validate" required>
+				<input type="text" name="search_term" value="{{ result['search_term'] }}" id="query" minlength="3" class="validate" required>
 				<label for="query">Search Recipes</label>
 			</div>
 			<div class="col s12 m4">
@@ -49,69 +49,69 @@
 </div>
 
 {% if recipes|length > 0 %}
-<ul id="collapsible" class="collapsible popout">
-	{% for recipe in recipes['items'] %}
-	<li>
-		<div class="collapsible-header white-text light-blue darken-4 text-shadow">
-			<i class="fas fa-caret-right icon-rotate"></i>
-			<div class="col s9 left-align">
-				<strong>Recipe Title</strong> {{recipe.recipe_title}} : <strong>Serves</strong> {{recipe.recipe_serves}}
-			</div>
-			<div class="col s3">
-				{% if session.user|lower == recipe.created_by|lower %}
-				<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-					class="btn-small light-blue lighten-1">Edit</a>
-				<a href="#delete_recipe" class="btn-small red modal-trigger">Delete</a>
-				<div id="delete_recipe" class="modal">
-					<div class="modal-content center-align">
-						<h5>Do you want to delete this recipe?</h5>
-						<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-							class="btn btn red modal-close">Delete</a>
-						<a href="#" class="btn btn black modal-close">Cancel</a>
-					</div>
-				</div>
-				{% endif %}
-			</div>
-
-		</div>
-		<div class="collapsible-body">
-
+<section class="container">
+    <ul id="collapsible" class="collapsible popout">
+        {% for recipe in recipes['items'] %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-right icon-rotate"></i>
+                <div class="col s9 left-align">
+                    <strong>Recipe Title</strong> {{recipe.recipe_title}} : <strong>Serves</strong> {{recipe.recipe_serves}}
+                </div>
+                <div class="col s3">
+                    {% if session.user|lower == recipe.created_by|lower %}
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                        class="btn-small light-blue lighten-1">Edit</a>
+                    <a href="#delete_recipe" class="btn-small red modal-trigger">Delete</a>
+                    <div id="delete_recipe" class="modal">
+                        <div class="modal-content center-align">
+                            <h5>Do you want to delete this recipe?</h5>
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                                class="btn btn red modal-close">Delete</a>
+                            <a href="#" class="btn btn black modal-close">Cancel</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="collapsible-body">
                 <p><h5>Description</h5></p>
-					<p>{{ recipe.recipe_description }}</p>
-			    			
+                <p>{{ recipe.recipe_description }}</p>	
                 <ul class="collection width-header">
                 <li class="collection-header"><h5>Ingredients</h5></li>
                 {% for item in recipe.recipe_ingredients %}
-					<li class="collection-item">{{ item }}</li>
-			    {% endfor %}
-				</ul>
-
+                    <li class="collection-item">{{ item }}</li>
+                {% endfor %}
+                </ul>
+                <!-- -->
                 <ul class="collection width-header">
                 <li class="collection-header"><h5>Method</h5></li>
                 {% for item in recipe.recipe_method %}
-					<li class="collection-item">{{ item }}</li>
-				{% endfor %}
-				</ul>
-			
+                    <li class="collection-item">{{ item }}</li>
+                {% endfor %}
+                </ul>
+                <!-- -->
                 <ul class="collection width-header">
                 <li class="collection-header"><h6>Cuisine</h6></li>
                 {% for item in recipe.recipe_cuisine %}
-					<li class="collection-item">{{ item }}</li>
-			    {% endfor %}
-				</ul>
-			
+                    <li class="collection-item">{{ item }}</li>
+                {% endfor %}
+                </ul>
+                <!-- -->
                 <p><h6>Preparation Time</h6></p>
-					<p>{{ recipe.recipe_preptime }}</p>
-			
+                <p>{{ recipe.recipe_preptime }}</p>
+                <!-- -->
                 <p><h6>Cooking Time</h6></p>
-					<p>{{ recipe.recipe_cookingtime }}</p>
-			
-			<p><em>by: {{ recipe.created_by }}</em></p>
-
-		</div>
-	</li>
-	{% endfor %}
-</ul>
+                <p>{{ recipe.recipe_cookingtime }}</p>
+                <p><em>by: {{ recipe.created_by }}</em></p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+<section class="container">
+    {{ components.pagination(url_for('get_recipes'), result) }}
+</section>
 {% else %}
 <h3 class="red-blue-text text-darken-4 center-align">No Results Found!</h3>
 {% endif %}

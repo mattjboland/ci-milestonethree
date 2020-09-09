@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # Pagination and sorting
-PAGE_SIZE = 8
+PAGE_SIZE = 3
 KEY_PAGE_SIZE = 'page_size'
 KEY_PAGE_NUMBER = 'page_number'
 KEY_TOTAL = 'total'
@@ -26,7 +26,7 @@ KEY_PAGE_COUNT = 'page_count'
 KEY_ENTITIES = 'items'
 KEY_NEXT = 'next_uri'
 KEY_PREV = 'prev_uri'
-KEY_WORD_FIND = 'word_find'
+KEY_SEARCH_TERM = 'search_term'
 KEY_ORDER_BY = 'order_by'
 KEY_ORDER = 'order'
 
@@ -41,12 +41,12 @@ def get_paginated_list(entity, query={}, **params):
         page_number = 1
     offset = (page_number - 1) * page_size
     items = []
-    word_find = ''
-    if KEY_WORD_FIND in params:
-        word_find = params.get(KEY_WORD_FIND)
-        if len(word_find.split()) > 0:
+    search_term = ''
+    if KEY_SEARCH_TERM in params:
+        search_term = params.get(KEY_SEARCH_TERM)
+        if len(search_term.split()) > 0:
             entity.create_index([("$**", 'text')])
-            result = entity.find({'$text': {'$search': word_find}})
+            result = entity.find({'$text': {'$search': search_term}})
             items = result.sort(order_by, order).skip(offset).limit(page_size)
         else:
             items = entity.find().sort(
@@ -82,20 +82,23 @@ def get_paginated_list(entity, query={}, **params):
         KEY_PAGE_NUMBER: page_number,
         KEY_NEXT: next_uri,
         KEY_PREV: prev_uri,
-        KEY_WORD_FIND: word_find,
+        KEY_SEARCH_TERM: search_term,
         KEY_ORDER_BY: order_by,
         KEY_ORDER: order,
         KEY_ENTITIES: items
-        }
+    }
 
 
 @app.route('/')
-@app.route('/get_recipes', methods=['GET'])
+@app.route('/get_recipes', methods=['GET', 'POST'])
 def get_recipes():
-    paginated_recipes = get_paginated_list(
-        mongo.db.recipe, **request.args.to_dict())
+    if request.method == 'GET':
+        params = request.args.to_dict()
+    else:
+        params = request.form.to_dict()
+    paginated_recipes = get_paginated_list(mongo.db.recipe, **params)
     return render_template(
-        "recipes.html", recipes=paginated_recipes)
+        "recipes.html", recipes=paginated_recipes, result=paginated_recipes)
 
 
 @app.route('/search', methods=['GET', 'POST'])
