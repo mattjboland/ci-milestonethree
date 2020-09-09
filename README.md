@@ -156,4 +156,146 @@ I built up my collections in MongoDB and have listed them below.
 
    All the wireframes for this project can be found here in [wireframes].(https://github.com/mattjboland/ci-milestonethree/tree/master/static/wireframes)
 
+## Features
 
+* Navigation Bar
+
+    The NavBar used is this project is a Materialize NavBar. It provide the links between the various different pages on
+    site. On the left is the name Online CookBook and this also acts as the Home button bringing the user bacl to the Home
+    Page.
+
+    When a user is not logged in or registered they have the following options on the NavBar.
+
+    * Home
+    * Log In
+    * Register
+
+    When a user is logged in they have the following options.
+
+    * Home
+    * Profile
+    * New Recipe
+    * Request Category
+    * Log Out
+
+    When the user is and Admin they have and extra option. 
+
+    * Manage Categories
+
+    These collapse into a Burger Bar when smaller screens are used and the Side NavBar is activated. This will display
+    the options and links as a NavBar would but it will pop out from the side.
+
+* Description 
+
+    This is a brief description of the app and how it works and what the app does.
+
+* Search
+
+    This allows the users to search for recipes or keywords and have the results displayed. They can the view the 
+    recipes and read through the steps etc. 
+
+* Register
+
+    Allows any user or visitor to register or sign up to the app. There is a link to the log in if the user has
+    already registered.
+
+* Log In
+
+    When Registered users can log in using the username and password that they created on registering. There is also
+    a link to the register page if a user has not registered.
+
+* Log Out 
+
+    Users can easily log out at any time.
+
+* Add Recipe (CREATE)
+
+    Users can add a recipe when logged in by using the form and selecting from the various dropdowns. The form field
+    is well structured and layout for ease od adding recipes. It is clear the steps the user needs to take to add a recipe
+    and when the form is filled out correctly they can add the recipe using the add recipe button at the bottom of the 
+    form. This is the CREATE part for the CRUD functionality
+
+* View Recipe (READ)
+
+    Users can search and read all recipes including their own easily either on the home page or by searching. All recipes
+    will be displayed whether the user has searched for a specific recipe. The logged in user will have the extra ability
+    to edit or delete their recipes as the buttone will be displayed easily identifying which recipe belongs to the user.
+    This is the READ part for the CRUD functionality.
+
+* Edit Recipe (UPDATE)
+
+    Similarly to the view above when a logged in user searches a recipe and decides to edit, a simple click of the edit
+    button and this will bring the user to a page displaying the original recipe preloaded on the form available for 
+    editing. All fields may be edited and some may need reconfirming. The edit allows you to add more ingredients but
+    also delete unneccesary ones as well as the same for methods. This is the UPDATE part for the CRUD functionality.
+
+* Delete Recipe (DELETE)
+
+    The user can also delete the recipe if he/she wishes. Only the author/creator of the recipe may delete just like the 
+    edit. When deleting a recipe and popup confirmation modal will display as a final warning to make sure that the user
+    really wants to delete. This is the DELETE part for the CRUD functionality.
+
+* Recipe Display
+
+    This displays the recipes for all viewers to see. A logged in user will be able to edit and delete their owns recipes
+    as the display will show the edit and delete buttons. Only the creator or the author of any recipe will only be able
+    to edit and delete their own recipe, so any user will not be able to edit or delete anyone elses recipe.
+
+* Footer
+
+    A simple footer with the name of the app again like above amd some Copyright info. There is social links there to 
+    allow the user to visit the social media sites of the App or App Author, but for now they just bring the user to 
+    the home page of each social media outlet. The final link is to the Authors GitHub, where users can view others
+    projects created by the Author.
+
+* Flashed Messages
+
+    Flashed messages are used throughout this app, this is a feature of Flask. It is used to help the user have a better
+    overall experence and to provide some feedback to the user. For example if a new user registers and picks a user name
+    that has already been used they will see a flashed message saying "Username already exists". Similarly if the user
+    logs in with an incorrect username or password, they will see "Incorrect Username and/or Password". There are various
+    examples of this across the app to prompt the user.
+
+* Features for future development of the app, I would have like to include a bit more to this app but unfortunately I was
+    out of time. I struggled with this project and that really hindered my timing as everything too quite a bit longer to
+    to get right and fully understand. I would have like to include a feature where the user would like or dislike a 
+    recipe or give it a rating of some sort, maybe 3 out of 5 stars or something similar. I would have also like to 
+    a picture that could be uploaded with the recipe and stored in the database too. Maybe even a forum or chat feature
+    various users could chat and talk about experiences with their recipes or to be able to look for help with other 
+    recipes. I would also like to include the proper connection of an email to the app creator about suggestions for new
+    categories to be added.  
+
+## Technologies Used
+
+    These are the following Technologies that were used to develop the app and are used throughout the app.
+
+### Languages
+
+* [HTML](https://html.com/) This was used as the Markup Language for the app.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) CSS was used for styling.
+* [Python](https://www.python.org/) This was used in the Backend due to its easy read ability and also at its versatile.
+* [JavaScript](https://www.javascript.com/) This was used to manipulate the DOM and to add dynamic Features.
+
+### Libraries
+
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) This is the Micro Web Framework that runs the application.
+* [Pymongo](https://pypi.org/project/pymongo/) This was used to help Python access the database.
+* [Materialize](https://materializecss.com/) This framework was used to build and style the application.
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) This is the templating Language used by Flask and this is used to display in the HTML by Python.
+* [jQuery](https://jquery.com/) This was used for event handling along with JavaScript. 
+* [FontAwesome](https://fontawesome.com/) This was used to display some cool icons used in the app. 
+* [GoogleFonts](https://fonts.google.com/) This was used for the font throughout the app.
+
+### Tools 
+
+### Hosting
+
+## Testing
+
+## Deployment
+
+## Credits
+
+* Content
+* Media 
+* Acknowledgements
