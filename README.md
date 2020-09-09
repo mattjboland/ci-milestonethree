@@ -288,9 +288,21 @@ I built up my collections in MongoDB and have listed them below.
 
 ### Tools 
 
+* [MongoDBAtlas](https://www.mongodb.com/cloud/atlas) This was used as the database for the app.
+* [GitPod](https://www.gitpod.io) This was used as the IDE to build the app.
+* [GitHub](https://github.com/) This was used for hosting software development and version control using Git.
+* [Git](https://git-scm.com/) This was used for version control.
+* [Balsamiq](https://balsamiq.com/) This was used for wireframes when starting off the planning.
+
 ### Hosting
 
+* [Heroku](https://www.heroku.com/) This was used to host the app.
+
 ## Testing
+
+    I have thoroughly testing the Log in features as well as Log out, Register, Add Recipe, Edit Recipe and Delete
+    Recipe. These are all working as they should and have no issues. I have also asked some friends to check the
+    app too and all have been able to use the app easily with no issues.
 
 ## Deployment
 
