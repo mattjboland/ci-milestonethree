@@ -16,6 +16,25 @@ body {
     background-size: cover;
     }
 
+/*----- -----*/
+
+#main-header {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 3rem;
+}
+
+#main-paragraph {
+    margin-top: 3rem;
+}
+
+#description-header {
+    margin-top: 3rem;
+}
+
+#description-paragraph {
+    margin-top: 3rem;
+}
+
 /*----- Adding text shadow to headers -----*/
 
 .text-shadow {
