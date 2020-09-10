@@ -1,5 +1,7 @@
 {%- macro pagination(url, result) -%}
 
+<!-- Pagination, sample from Guido -->
+
 <ul class="pagination">
     {% if result['prev_uri'] is none %}
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
