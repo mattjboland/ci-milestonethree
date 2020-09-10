@@ -12,7 +12,11 @@ body {
 
 /*----- Backgound image -----*/
 
-
+body {
+    background-image: url("/static/images/food-white-background.jpg");
+    background-repeat: repeat;
+    z-index: -1;
+    }
 
 /*----- Adding text shadow to headers -----*/
 
