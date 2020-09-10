@@ -18,7 +18,9 @@
 <body>
 
 	<header>
+
 		<!-- Top navbar Materialize -->
+
 		<nav class="navbar-fixed text-shadow light-blue darken-1">
 			<div class="container">
 				<a href="{{ url_for('get_recipes') }}">Online Cookbook</a>
@@ -42,6 +44,7 @@
 		</nav>
         
 		<!-- Mobile side navbar Materialize -->
+
 		<ul class="sidenav" id="mobile-demo">
 			<li>
 				<h4 class="center-align light-blue-text text-darken-4"></h4>
@@ -64,6 +67,7 @@
 
     <section>
         <!-- Flash message CI Coursework Content -->
+        
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
