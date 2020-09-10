@@ -2,6 +2,9 @@
 {% import 'components.html' as components %}
 
 {% block content %}
+
+<!-- Description, and how to use -->
+
 <h3 class="light-blue-text text-darken-4 center-align">Welcome to the Online Cookbook App</h3>
 
 <p class="black-text text-darken-4 center-align">This is a web application that allows you to add your own recipes
@@ -28,6 +31,8 @@
     </div>
 </section>
 
+<!-- All Recipes, search CI Coursework Content -->
+
 <h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
 
 <div class="row card-panel grey-lighten-5">
@@ -48,9 +53,11 @@
 	</form>
 </div>
 
+<!-- Materialise collapsible to display recipe, CI Coursework Content -->
+
 {% if recipes|length > 0 %}
-<section id="recipe-display" class="container-fluid">
-    <ul id="collapsible" class="collapsible popout">
+<section class="container-fluid">
+    <ul id="recipe-display" class="collapsible">
         {% for recipe in recipes['items'] %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
@@ -74,6 +81,9 @@
                     {% endif %}
                 </div>
             </div>
+
+            <!-- Collapsible to render recipe from MongoDB -->
+            
             <div class="collapsible-body">
                 <p><h5>Description</h5></p>
                 <p>{{ recipe.recipe_description }}</p>	
@@ -109,9 +119,15 @@
         {% endfor %}
     </ul>
 </section>
+
+<!-- Pagination, sample from Guido -->
+
 <section class="container">
     {{ components.pagination(url_for('get_recipes'), result) }}
 </section>
+
+<!-- Flash message -->
+
 {% else %}
 <h3 class="red-blue-text text-darken-4 center-align">No Results Found!</h3>
 {% endif %}

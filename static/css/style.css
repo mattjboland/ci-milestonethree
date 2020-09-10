@@ -43,6 +43,10 @@ main {
     flex: 1 0 auto;
 }
 
+#recipe-display {
+    background-color: white;
+}
+
 /*-----  Confirmation Modal for Delete button -----*/
 
 .modal {
