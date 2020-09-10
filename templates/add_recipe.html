@@ -6,7 +6,8 @@
 <div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
 
-        <!-- choose category -->
+        <!-- Choose category, CI Coursework Content -->
+
         <div class="input-field col s6">
             <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
             <select id="category_name" name="category_name" class="validate" required>
@@ -18,7 +19,8 @@
             <label for="category_name">Recipe Category</label>
         </div>
 
-        <!-- add allergens -->
+        <!-- Add allergens -->
+
         <div class="row">
             <div class="input-field col s6">
                 <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
@@ -32,7 +34,8 @@
             </div>
         </div>
 
-        <!-- add title new recipe -->
+        <!-- Add title new recipe -->
+
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensils prefix light-blue-text text-darken-4"></i>
@@ -42,7 +45,8 @@
             </div>
         </div>
 
-        <!-- add description -->
+        <!-- Add description -->
+
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
@@ -52,7 +56,8 @@
             </div>
         </div>
 
-        <!-- add ingredients -->
+        <!-- Add ingredients, example given to me by Guido -->
+
         <div class="row">
             <div class="col s6">
                 <div class="card background">
@@ -65,12 +70,14 @@
                             </div>
                         </div>
 
-                        <!-- add button -->
+                        <!-- Add button -->
+
                         <a id="add_ingredient" class="btn waves-effect waves-light light-green">
                             <i class="fas fa-plus"></i>
                         </a>
 
                         <!-- Remove button -->
+
                         <a id="remove_ingredient" class="btn waves-effect waves-light red lighten-2">
                             <i class="fas fa-minus"></i>
                         </a>
@@ -79,7 +86,8 @@
                 </div>
             </div>
 
-            <!-- add method -->
+            <!-- Add method, example given to me by Guido -->
+             
             <div class="col s6">
                 <div class="card background">
                     <div class="card-content">
@@ -91,12 +99,14 @@
                             </div>
                         </div>
 
-                        <!-- add button -->
+                        <!-- Add button -->
+
                         <a id="add_step" class="btn waves-effect waves-light light-green">
                             <i class="fas fa-plus"></i>
                         </a>
 
-                        <!-- remove button -->
+                        <!-- Remove button -->
+
                         <a id="remove_step" class="btn waves-effect waves-light red lighten-2">
                             <i class="fas fa-minus"></i>
                         </a>
@@ -106,7 +116,8 @@
             </div>
         </div>
 
-        <!-- add serves -->
+        <!-- Add serves -->
+
         <div class="row">
             <div class="input-field col s3">
                 <i class="fas fa-sort-numeric-down prefix light-blue-text text-darken-4"></i>
@@ -115,7 +126,8 @@
                 <label for="recipe_serves">Serves</label>
             </div>
 
-            <!-- add cooking time -->
+            <!-- Add cooking time -->
+
             <div class="input-field col s3">
                 <i class="fas fa-hourglass-start prefix light-blue-text text-darken-4"></i>
                 <input id="recipe_cookingtime" name="recipe_cookingtime" minlength="1" maxlength="5"
@@ -123,7 +135,8 @@
                 <label for="recipe_cookingtime">Cooking Time</label>
             </div>
 
-            <!-- add prep time -->
+            <!-- Add prep time -->
+
             <div class="input-field col s3">
                 <i class="fas fa-hourglass-end prefix light-blue-text text-darken-4"></i>
                 <input id="recipe_preptime" name="recipe_preptime" minlength="1" maxlength="5"
@@ -131,7 +144,8 @@
                 <label for="recipe_preptime">Prep Time</label>
             </div>
 
-            <!-- add cuisine -->
+            <!-- Add cuisine -->
+
             <div class="input-field col s3">
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
                 <select id="cuisine_name" name="cuisine_name" class="validate" required>
@@ -144,7 +158,8 @@
             </div>
         </div>
 
-        <!-- add recipe button -->
+        <!-- Add recipe button -->
+
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large light-blue darken-1 text-shadow">
