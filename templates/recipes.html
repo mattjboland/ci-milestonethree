@@ -93,24 +93,24 @@
                     <li class="collection-item">{{ item }}</li>
                 {% endfor %}
                 </ul>
-                <!-- -->
+                
                 <ul class="collection width-header">
                 <li class="collection-header"><h5>Method</h5></li>
                 {% for item in recipe.recipe_method %}
                     <li class="collection-item">{{ item }}</li>
                 {% endfor %}
                 </ul>
-                <!-- -->
+                
                 <ul class="collection width-header">
                 <li class="collection-header"><h6>Cuisine</h6></li>
                 {% for item in recipe.recipe_cuisine %}
                     <li class="collection-item">{{ item }}</li>
                 {% endfor %}
                 </ul>
-                <!-- -->
+                
                 <p><h6>Preparation Time</h6></p>
                 <p>{{ recipe.recipe_preptime }}</p>
-                <!-- -->
+                
                 <p><h6>Cooking Time</h6></p>
                 <p>{{ recipe.recipe_cookingtime }}</p>
                 <p><em>by: {{ recipe.created_by }}</em></p>
