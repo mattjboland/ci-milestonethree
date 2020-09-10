@@ -7,15 +7,13 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-repeat: repeat-y;
 }
 
 /*----- Backgound image -----*/
 
 body {
     background-image: url("/static/images/food-white-background.jpg");
-    background-repeat: repeat;
-    z-index: -1;
+    background-size: cover;
     }
 
 /*----- Adding text shadow to headers -----*/
@@ -31,10 +29,6 @@ body {
 }
 
 /*----- Collapsible for displaying recipes -----*/
-
-#recipe-display {
-    background-color: white;
-}
 
 .btn-small {
     margin: 5px;
