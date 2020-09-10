@@ -154,7 +154,7 @@ I built up my collections in MongoDB and have listed them below.
    website / App. I have never used Balsamiq before but it is a great tool for planning stages and really help you with
    design aspects of the website. It give you a real feel and look at a plan and make it easier to visualise.
 
-   All the wireframes for this project can be found here in [wireframes].(https://github.com/mattjboland/ci-milestonethree/tree/master/static/wireframes)
+   All the wireframes for this project can be found here in [wireframes](https://github.com/mattjboland/ci-milestonethree/tree/master/static/wireframes)
 
 ## Features
 
