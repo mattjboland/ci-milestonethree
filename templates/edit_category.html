@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Editing Categories, reserved for Admin user, CI Coursework Content -->
+
 <h3 class="light-blue-text text-darken-4 center-align">Edit Category</h3>
 
 <div class="row card-panel grey lighten-5">
 	<form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
     
-    <!-- choose category -->
+    <!-- Choose category -->
 
         <div class="row">
 		    <div class="input-field col s12">
@@ -17,7 +19,7 @@
             </div>
         </div>    
 
-        <!-- edit category button -->
+        <!-- Edit category button -->
 
         <div class="row">
             <div class="col s12 center-align">
