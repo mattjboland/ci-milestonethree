@@ -6,7 +6,7 @@
     The purpose of this app is to allow users store and manage their recipes in an app using CRUD 
     operation, Create, Read, Update and Delete.
 
-    The deployed site can be found **[here](https://online-cookbook-milestonethree.herokuapp.com/)**
+The deployed site can be found **[here](https://online-cookbook-milestonethree.herokuapp.com/)**
 
 ## Table of Contents
 
