@@ -2,9 +2,9 @@
 
     This is an Online Cookbook App, for Data Centric Milestone Three Project with Code Institute.
 
-    Online Cookbook, is an App built using the Flask Framework with Python and MongoDB as the database. The purpose of
-    this app is to allow users store and manage their recipes in an app using CRUD operation, Create, Read, Update and
-    Delete.
+    Online Cookbook, is an App built using the Flask Framework with Python and MongoDB as the database.
+    The purpose of this app is to allow users store and manage their recipes in an app using CRUD 
+    operation, Create, Read, Update and Delete.
 
     The deployed site can be found here.
 
@@ -275,6 +275,11 @@ I built up my collections in MongoDB and have listed them below.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) CSS was used for styling.
 * [Python](https://www.python.org/) This was used in the Backend due to its easy read ability and also at its versatile.
 * [JavaScript](https://www.javascript.com/) This was used to manipulate the DOM and to add dynamic Features.
+
+#### Dependencies
+
+    There is a list of Dependencies required to run the app, these packages are listed in the requirements.txt file.
+    These can be installed by typing the following statement into the terminal and pressing enter.
 
 ### Libraries
 
