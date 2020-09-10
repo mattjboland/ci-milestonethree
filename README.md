@@ -278,8 +278,11 @@ I built up my collections in MongoDB and have listed them below.
 
 #### Dependencies
 
-    There is a list of Dependencies required to run the app, these packages are listed in the requirements.txt file.
-    These can be installed by typing the following statement into the terminal and pressing enter.
+    There is a list of Dependencies required to run the app, these packages are listed in the 
+    requirements.txt file. These can be installed by typing the following statement into the 
+    terminal and pressing enter.
+
+    pip3 install flask pymongo dnspython flask-pymongo
 
 ### Libraries
 
