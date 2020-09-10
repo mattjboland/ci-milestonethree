@@ -28,9 +28,8 @@ body {
 
 /*----- Collapsible for displaying recipes -----*/
 
-#collapsible {
-    position: relative;
-    z-index: 0;
+#recipe-display {
+    background-color: white;
 }
 
 .btn-small {
