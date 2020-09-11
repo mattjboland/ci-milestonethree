@@ -384,6 +384,13 @@ this was a great way to solve that issue.
 
 ## Deployment
 
+* GitHub Repository
+
+* GitPod
+
+* Heroku
+
+
 ## Credits
 
 * Content
