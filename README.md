@@ -280,9 +280,14 @@ I built up my collections in MongoDB and have listed them below.
 
     There is a list of Dependencies required to run the app, these packages are listed in the 
     requirements.txt file. These can be installed by typing the following statement into the 
-    terminal and pressing enter.
+    terminal and pressing enter. I have chained these together in one command to save a little
+    time.
 
     pip3 install flask pymongo dnspython flask-pymongo
+
+    The following upgrade pip3 can then be installed if required.
+
+    python3 -m pip install --upgrade pip
 
 ### Libraries
 
@@ -308,9 +313,10 @@ I built up my collections in MongoDB and have listed them below.
 
 ## Testing
 
-    I have thoroughly testing the Log in features as well as Log out, Register, Add Recipe, Edit Recipe and Delete
+    I have thoroughly tested the Log in features as well as Log out, Register, Add Recipe, Edit Recipe and Delete
     Recipe. These are all working as they should and have no issues. I have also asked some friends to check the
-    app too and all have been able to use the app easily with no issues.
+    app too and all have been able to use the app easily with no issues. They can register and add recipes easily
+    and have no issues updating or deleting recipes.
 
 ### Issues and Bugs
 
