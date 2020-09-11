@@ -311,14 +311,71 @@ I built up my collections in MongoDB and have listed them below.
 
 * [Heroku](https://www.heroku.com/) This was used to host the app.
 
-## Testing
+## Testing and Validation
+
+* Testing
 
     I have thoroughly tested the Log in features as well as Log out, Register, Add Recipe, Edit Recipe and Delete
     Recipe. These are all working as they should and have no issues. I have also asked some friends to check the
     app too and all have been able to use the app easily with no issues. They can register and add recipes easily
     and have no issues updating or deleting recipes.
 
+* Validation
+
+    [HTML](https://validator.w3.org/)
+
+    I used this Validator to test all HTML, no major errors were reported. I got a lot of error messages due to
+    the Validator not recognising the the Jinja templating language.
+
+    [CSS](https://jigsaw.w3.org/css-validator/)
+
+    I used this Validator to test the CSS and no errors were found.
+
+    [JavaScript](https://jshint.com/)
+
+    I used this Validator to test the JavaScript and no major errors were found.
+
 ### Issues and Bugs
+
+As always issues and bugs are common for developers and finding solutions is a great way of learning why errors
+occur and how to go about solving them. I had many issues along the way in this project, mostly I found the 
+main issue was me and not understanding correctly or not calling functions correctly. I found this project the 
+toughest of them all and I proved to be the most serious issue. I did find this project particularly tough and 
+my understanding of Python, Jinja templating language and the database MongoDBAtlas wasn't the greatest. But as
+I dived in and started, my understanding began to improve slowly.
+
+I have to mention that the course tutors were incredible and always able to give you a helping hand or push in
+the right direction. Also my mentor Guido who after two sessions started to make things clearer for me and my
+understanding improved, I will however be taking some time at a later stage to go through this issues I had
+to improve my knowledge and understanding.
+
+The beginning of my project threw up some interesting issues, some of which could have been totally avoided
+but helped in the long run.
+
+My first main issue was the Materialize NavBar and sidenav would not work at all. This took me ages to figure 
+out. The NavBar was there at the top but the SideNav just would not work and the links in the SideNav were 
+displaying in the body. Also the burger bars were not active and actually rendering over the name in the NavBar.
+
+Initially I thought this was easy fixed by initalising the NavBar and SideNav with the correct jQuery event
+handler installed but this didnt work either. It took quite some time to realise that the components I used from
+Materialize were version 1.0.0 but I had linked version 0.100.2, I'm not even sure how I managed to do that but
+that solve the main issue and left only one. The burger bars were still not behaving and with various different 
+option Googled, I chanced my arm and removed the attribute brand-logo and that did the trick.
+
+I had way too many errors with MongoDB and these took me a lot of time to figure out. Hours of going through my 
+route decorators, if statements and for loops proved very tiring on the mind and eyes but persistance paid and
+also help me gain a better understanding of how to call the correct information from the database. The first 
+example was in my app.py in the route decorator get_recipes! I was getting confused I was always searching for
+recipes but nothing woulf be showing up and it was honestly driving me mad. I did this so many times and its
+my fault as I dont think I was naming the collections and fields the best and was leading me to confusing 
+myself. I did finally figure it out to get my recipes I needed to search by mongo.db.recipe.find and not
+recipes. I think with something like this its better to name the collections etc better to avoid confusion.
+
+Another issues I came across again and again in my app.py, was getting the coding right and correctly written
+spaced etc. Was consistantly getting errors line too long, or not correctly indented/over-indented. Other times
+it was a whitespace issue. Most of which were easily solved as the problems were highlighted. I also had to 
+learn how to correctly split lines that were too long and how to go about doing that proved difficult at the 
+beginning but worked out easy enough in the end.  
 
 ## Deployment
 

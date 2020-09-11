@@ -74,10 +74,6 @@ main {
 
 /*----- Footer -----*/
 
-.page-footer i:hover {
-    color: rgb(0, 5, 100);
-}
-
 #page-footer {
     position: relative;
     bottom: 0;
