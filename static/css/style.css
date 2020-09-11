@@ -16,7 +16,7 @@ body {
     background-size: cover;
     }
 
-/*----- -----*/
+/*----- Header and paragraph -----*/
 
 #main-header {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -103,5 +103,3 @@ main {
     font-size: 1.5rem;
 }
 }
-
-/*-----   -----*/

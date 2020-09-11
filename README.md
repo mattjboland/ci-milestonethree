@@ -375,7 +375,12 @@ Another issues I came across again and again in my app.py, was getting the codin
 spaced etc. Was consistantly getting errors line too long, or not correctly indented/over-indented. Other times
 it was a whitespace issue. Most of which were easily solved as the problems were highlighted. I also had to 
 learn how to correctly split lines that were too long and how to go about doing that proved difficult at the 
-beginning but worked out easy enough in the end.  
+beginning but worked out easy enough in the end. 
+
+I had problems trying to get my FontAwesome icon caret to rotate when clicked to show the recipe in recipes.html.
+This again took a lot of time but found a similar problem someone had experienced before on StackOverflow and was
+able to solve this problem with some handy JavaScript by adding and removing classes within the JavaScript and 
+this was a great way to solve that issue.
 
 ## Deployment
 
