@@ -390,7 +390,7 @@ this was a great way to solve that issue.
 
 ## Deployment
 
-* GitHub Repository
+#### GitHub Repository
 
 I set my GitHub Repository [Milestonethree](https://github.com/mattjboland/ci-milestonethree) with the tmeplate
 from Code Institute. These are the initial steps I took.
@@ -404,7 +404,7 @@ from Code Institute. These are the initial steps I took.
 
 This setup GitHub so everytime I worked on my project I could save and commit the changes to GitHub.
 
-* GitPod
+#### GitPod
 
 I used GitPod to run my code locally, first I set up my Enviroment Variables.
 
@@ -438,7 +438,7 @@ Then in my app.py I imported env that would be needed.
     app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
     app.secret_key = os.environ.get("SECRET_KEY")
 
-* Heroku
+#### Heroku
 
 I then connected to Heroku using the following steps in the terminal in GitPod.
 
