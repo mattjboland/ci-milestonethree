@@ -49,13 +49,13 @@ try others.
 
 As a User to this app, I want to be able to do the following.
 
-    * Gain access to an app to store my recipes
-    * Upload recipes that I have used and would like to save/share
-    * Be able to edit the recipes if a better method was found or similar
-    * Be able to delete the recipe if it wasnt good
-    * Have a database of recipes that could be searched for new ideas etc
-    * Be able to view/search different categories of recipes
-    * Have the ability to Login as a user and safely Logout
+* Gain access to an app to store my recipes
+* Upload recipes that I have used and would like to save/share
+* Be able to edit the recipes if a better method was found or similar
+* Be able to delete the recipe if it wasnt good
+* Have a database of recipes that could be searched for new ideas etc
+* Be able to view/search different categories of recipes
+* Have the ability to Login as a user and safely Logout
 
 ### Design
 
@@ -337,6 +337,10 @@ I built up my collections in MongoDB and have listed them below.
 
     I used this Validator to test the JavaScript and no major errors were found.
 
+    [Python](http://pep8online.com/)
+
+    I used this Validator to test and no errors were found.
+
 ### Issues and Bugs
 
 As always issues and bugs are common for developers and finding solutions is a great way of learning why errors
@@ -388,10 +392,81 @@ this was a great way to solve that issue.
 
 * GitHub Repository
 
+I set my GitHub Repository [Milestonethree](https://github.com/mattjboland/ci-milestonethree) with the tmeplate
+from Code Institute. These are the initial steps I took.
+
+* git init                              to initalise git from the terminal.
+* git add .                             to add the files to the staging area.
+* git commit -m "initial commit"        commited the first files to GitHub Repository
+
+* git remote add origin 
+* git push -u origin master             I copied this path from GitHub and used in my terminal to link to my repository.
+
+This setup GitHub so everytime I worked on my project I could save and commit the changes to GitHub.
+
 * GitPod
+
+I used GitPod to run my code locally, first I set up my Enviroment Variables.
+
+* touch env.py                          I created this file to define my enviroment variables.
+* echo env.py > .gitignore              I then created my .gitignore file so my env.py file would not committed to GitHub.
+
+I then installed my Dependencies which are listed in a requirements.txt file which I will explain how I did later.
+
+* pip3 install flask pymongo dnspython flask-pymongo
+
+This prompted an upgrade to pip,
+
+* python3 -m pip install --upgrade pip
+
+I then set up my enviroment variables in my env.py file.
+
+    import os
+
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+
+    os.environ.setdefault("MONGO_URI", "mongodb+srv://root:<PASSWORD>"
+                          "@myfirstcluster-olf6t.mongodb.net"
+                          "/online_cookbook?retryWrites=true&w=majority")
+    os.environ.setdefault("MONGO_DBNAME", "online_cookbook")
+
+Then in my app.py I imported env that would be needed.
+
+    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+    app.secret_key = os.environ.get("SECRET_KEY")
 
 * Heroku
 
+I then connected to Heroku using the following steps in the terminal in GitPod.
+
+* heroku login 
+* heroku apps
+* git init 
+* git add .
+* git commit -m "commit message"
+* git push heroku master
+
+* pip3 freeze --local > requirements.txt        this lists my Dependencies.
+* git add .
+* git commit -m "added requirements.txt"
+* git push heroku master
+
+* echo web: python app.py > Procfile
+* git add .
+* git commit -m "added Procfile"
+* git push heroku master
+
+* heroku ps:scale web=1
+
+I then created my Config Vars.
+
+* IP 0.0.0.0
+* PORT 5000
+
+I then linked Heroku to GitHub so that would enable me to a continous delivery. I then pushed everything to GitHub.
 
 ## Credits
 
