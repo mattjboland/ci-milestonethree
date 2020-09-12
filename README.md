@@ -1,5 +1,7 @@
 ## Online CookBook - An online cookbook App
 
+![alt text](https://github.com/mattjboland/ci-milestonethree/blob/master/static/images/homepagescreenshot.png)
+
     This is an Online Cookbook App, for Data Centric Milestone Three Project with Code Institute.
 
     Online Cookbook, is an App built using the Flask Framework with Python and MongoDB as the database.
