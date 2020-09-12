@@ -395,12 +395,12 @@ this was a great way to solve that issue.
 I set my GitHub Repository [Milestonethree](https://github.com/mattjboland/ci-milestonethree) with the tmeplate
 from Code Institute. These are the initial steps I took.
 
-* git init                              to initalise git from the terminal.
-* git add .                             to add the files to the staging area.
-* git commit -m "initial commit"        commited the first files to GitHub Repository
+1. git init                              to initalise git from the terminal.
+2. git add .                             to add the files to the staging area.
+3. git commit -m "initial commit"        commited the first files to GitHub Repository
 
-* git remote add origin 
-* git push -u origin master             I copied this path from GitHub and used in my terminal to link to my repository.
+4. git remote add origin 
+5. git push -u origin master             I copied this path from GitHub and used in my terminal to link to my repository.
 
 This setup GitHub so everytime I worked on my project I could save and commit the changes to GitHub.
 
@@ -408,8 +408,8 @@ This setup GitHub so everytime I worked on my project I could save and commit th
 
 I used GitPod to run my code locally, first I set up my Enviroment Variables.
 
-* touch env.py                          I created this file to define my enviroment variables.
-* echo env.py > .gitignore              I then created my .gitignore file so my env.py file would not committed to GitHub.
+6. touch env.py                          I created this file to define my enviroment variables.
+7. echo env.py > .gitignore              I then created my .gitignore file so my env.py file would not committed to GitHub.
 
 I then installed my Dependencies which are listed in a requirements.txt file which I will explain how I did later.
 
@@ -442,29 +442,29 @@ Then in my app.py I imported env that would be needed.
 
 I then connected to Heroku using the following steps in the terminal in GitPod.
 
-* heroku login 
-* heroku apps
-* git init 
-* git add .
-* git commit -m "commit message"
-* git push heroku master
+8. heroku login 
+9. heroku apps
+10. git init 
+11. git add .
+12. git commit -m "commit message"
+13. git push heroku master
 
-* pip3 freeze --local > requirements.txt        this lists my Dependencies.
-* git add .
-* git commit -m "added requirements.txt"
-* git push heroku master
+14. pip3 freeze --local > requirements.txt        this lists my Dependencies.
+15. git add .
+16. git commit -m "added requirements.txt"
+17. git push heroku master
 
-* echo web: python app.py > Procfile
-* git add .
-* git commit -m "added Procfile"
-* git push heroku master
+18. echo web: python app.py > Procfile
+19. git add .
+20. git commit -m "added Procfile"
+21. git push heroku master
 
-* heroku ps:scale web=1
+22. heroku ps:scale web=1
 
 I then created my Config Vars.
 
-* IP 0.0.0.0
-* PORT 5000
+23. IP 0.0.0.0
+24. PORT 5000
 
 I then linked Heroku to GitHub so that would enable me to a continous delivery. I then pushed everything to GitHub.
 
