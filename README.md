@@ -468,6 +468,14 @@ I then created my Config Vars.
 
 I then linked Heroku to GitHub so that would enable me to a continous delivery. I then pushed everything to GitHub.
 
+#### Repository
+
+(https://github.com/mattjboland/ci-milestonethree)
+
+#### Heroku App
+
+(https://online-cookbook-milestonethree.herokuapp.com/)
+
 ## Credits
 
 * Content
