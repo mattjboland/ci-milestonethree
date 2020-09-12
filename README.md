@@ -409,7 +409,7 @@ This setup GitHub so everytime I worked on my project I could save and commit th
 I used GitPod to run my code locally, first I set up my Enviroment Variables.
 
 6. touch env.py                          <br>(I created this file to define my enviroment variables.)
-7. echo env.py > .gitignore              <br>(I then created my .gitignore file so my env.py file would not committed to GitHub.)
+7. echo env.py > .gitignore              <br>(I then created my .gitignore file so my env.py and __pycache__/ file would not committed to GitHub.)
 
 I then installed my Dependencies which are listed in a requirements.txt file which I will explain how I did later.
 
@@ -479,5 +479,29 @@ I then linked Heroku to GitHub so that would enable me to a continous delivery. 
 ## Credits
 
 * Content
+
+    The majority of the content used for my project were based on the CI Course Content. Modified slightly to suit
+    my app. Materialize was used for all main components, I found this a little bit easier than Bootstrap and a little
+    bit more appealing.
+
+    I used FontAwesome for the icons used as I prefer the style.
+
+    As I struggled with this project I found myself relying on the Course to help me understand and guide me into 
+    getting things right within the app.
+
+    There were a lot of tutorial watched but most of my help came from the content in the following list,
+
+        https://stackoverflow.com/
+        https://www.youtube.com/
+        https://slack.com/intl/en-ie/
+        https://www.tutorialspoint.com/index.htm
+
+    The recipes I have used for testing purposes are my own recipes.
+
 * Media 
+
+    The images I used in this app are from https://www.freepik.com/.
+
 * Acknowledgements
+
+
