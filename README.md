@@ -489,19 +489,35 @@ I then linked Heroku to GitHub so that would enable me to a continous delivery. 
     As I struggled with this project I found myself relying on the Course to help me understand and guide me into 
     getting things right within the app.
 
-    There were a lot of tutorial watched but most of my help came from the content in the following list,
+    There were a lot of tutorials watched but most of my help came from the content in the following list,
 
         https://stackoverflow.com/
         https://www.youtube.com/
         https://slack.com/intl/en-ie/
         https://www.tutorialspoint.com/index.htm
 
-    The recipes I have used for testing purposes are my own recipes.
+    The recipes I have used for testing purposes are my own recipes. Others added by testers.
 
 * Media 
 
     The images I used in this app are from https://www.freepik.com/.
 
 * Acknowledgements
+    * [Code Institute](https://codeinstitute.net/) I used parts of code from the modules, coursework and projects.
+    * Special mention to CI Tutor Support who really gave me a massive push in the right direction when I had some issues
+        one Saturday evening and between two tutors they really helped guide me to solving some issues.
+    * [Slack](https://slack.com/intl/en-ie/) I also used this website for help on code and errors several times and the help
+        from other students and mentors there means always someone available.
+    * [StackOverflow](https://stackoverflow.com/) This website was used as a reference for problem and tips.
+    * [W3schools](https://www.w3schools.com/) I used this website when I encountered some problems with my code.
+    * Guido Cecilio, Guido is my mentor and his help and patience on this project was incredible again. I learned so much 
+        from our meetings and without his knowledge and information it would have been an impossible task. I am so grateful
+        for his help. He also gave me some examples by other students to help me learn and use as reference, I did use some
+        code but tried to limit this and modify for use with my app.
+            https://github.com/stephyraju/spiceworld
+            https://github.com/elenasacristan/CookBook
+    * Paul Brennan, a friend of mine who was always at the end of the phone to help with some issues when needed.
+
+
 
 
