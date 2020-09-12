@@ -87,6 +87,8 @@ main {
   }
 }
 
+/*----- Pagination card -----*/
+
 .pagination-card-padding {
     padding: 3px 0px;
 }
@@ -95,6 +97,8 @@ main {
     text-align: center;
     width: 100%;
 }
+
+/*----- Header and recipe display -----*/
 
 #recipe-display h5 {
     border-bottom: solid 1px #eee;
