@@ -392,15 +392,15 @@ this was a great way to solve that issue.
 
 #### GitHub Repository
 
-I set my GitHub Repository [Milestonethree](https://github.com/mattjboland/ci-milestonethree) with the tmeplate
+I set my GitHub Repository [Milestonethree](https://github.com/mattjboland/ci-milestonethree) with the template
 from Code Institute. These are the initial steps I took.
 
-1. git init                              <br>to initalise git from the terminal.
-2. git add .                             <br>to add the files to the staging area.
-3. git commit -m "initial commit"        <br>commited the first files to GitHub Repository
+1. git init                              <br>(To initalise git from the terminal.)
+2. git add .                             <br>(To add the files to the staging area.)
+3. git commit -m "initial commit"        <br>(Commited the first files to GitHub Repository.)
 
 4. git remote add origin 
-5. git push -u origin master             <br>I copied this path from GitHub and used in my terminal to link to my repository.
+5. git push -u origin master             <br>(I copied this path from GitHub and used in my terminal to link to my repository.)
 
 This setup GitHub so everytime I worked on my project I could save and commit the changes to GitHub.
 
@@ -408,8 +408,8 @@ This setup GitHub so everytime I worked on my project I could save and commit th
 
 I used GitPod to run my code locally, first I set up my Enviroment Variables.
 
-6. touch env.py                          <br>I created this file to define my enviroment variables.
-7. echo env.py > .gitignore              <br>I then created my .gitignore file so my env.py file would not committed to GitHub.
+6. touch env.py                          <br>(I created this file to define my enviroment variables.)
+7. echo env.py > .gitignore              <br>(I then created my .gitignore file so my env.py file would not committed to GitHub.)
 
 I then installed my Dependencies which are listed in a requirements.txt file which I will explain how I did later.
 
@@ -449,7 +449,7 @@ I then connected to Heroku using the following steps in the terminal in GitPod.
 12. git commit -m "commit message"
 13. git push heroku master
 
-14. pip3 freeze --local > requirements.txt        <br>this lists my Dependencies.
+14. pip3 freeze --local > requirements.txt        <br>(This lists my Dependencies.)
 15. git add .
 16. git commit -m "added requirements.txt"
 17. git push heroku master
