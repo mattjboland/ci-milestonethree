@@ -1,105 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
-
-/*----- Main body with Ribeye font imported -----*/
+@import url("https://fonts.googleapis.com/css2?family=Ribeye&display=swap");
 
 body {
-    font-family: 'Ribeye', cursive;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-/*----- Backgound image from freepik.com -----*/
-
-body {
-    background-image: url("/static/images/food-white-background.jpg");
-    background-size: cover;
-    }
-
-/*----- Header and paragraph -----*/
-
-#main-header {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    margin-top: 3rem;
-}
-
-#main-paragraph {
-    margin-top: 3rem;
-}
-
-#description-header {
-    margin-top: 3rem;
-}
-
-#description-paragraph {
-    margin-top: 3rem;
+  font-family: "Ribeye", cursive;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("/static/images/food-white-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*----- Adding text shadow to headers -----*/
 
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /*----- Flashed messages -----*/
 
 #flashes h4 {
-    line-height: 2;
+  line-height: 2;
+}
+
+/*----- Spacing ------*/
+.pt9 {
+	padding-top: 9px !important;
 }
 
 /*----- Collapsible for displaying recipes -----*/
 
 .btn-small {
-    margin: 5px;
+  margin: 5px;
 }
 
 .collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
+  margin: 5px;
+  line-height: 42px;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 #recipe-display {
-    background-color: white;
+  background-color: white;
 }
 
 /*-----  Confirmation Modal for Delete button -----*/
 
 .modal {
-    color: black;
+  color: black;
 }
 
 /*----- Footer -----*/
 
-#page-footer {
-    position: relative;
-    bottom: 0;
-    height: 5rem;
-}
-
 .footer-content {
-    display: flex;
+  display: flex;
 }
 
 .copyright {
-    padding-top: 20px;
-    margin: 5px;
-    color: white;
+  padding-top: 20px;
+  margin: 5px;
+  color: white;
 }
 
 .social-icon {
-    padding-top: 20px;
-    margin: 5px;
-    color: white;
-    font-size: 1.7rem;
+  padding-top: 20px;
+  margin: 5px;
+  color: white;
+  font-size: 1.7rem;
 }
-@media only screen and (max-width:320px){
-.social-icon {
+
+@media only screen and (max-width: 320px) {
+  .social-icon {
     margin: 8px;
     color: white;
     font-size: 1.5rem;
+  }
 }
+
+.pagination-card-padding {
+    padding: 3px 0px;
+}
+
+.pagination-container {
+    text-align: center;
+    width: 100%;
+}
+
+#recipe-display h5 {
+    border-bottom: solid 1px #eee;
 }
