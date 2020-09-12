@@ -466,7 +466,7 @@ I then created my Config Vars.
 23. IP 0.0.0.0
 24. PORT 5000
 
-I then linked Heroku to GitHub so that would enable me to a continous delivery. I then pushed everything to GitHub.
+I then linked Heroku to GitHub so that would enable me to achieve continous delivery. I then pushed everything to GitHub.
 
 #### Repository
 
