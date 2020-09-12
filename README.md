@@ -514,7 +514,7 @@ I then linked Heroku to GitHub so that would enable me to a continous delivery. 
         from our meetings and without his knowledge and information it would have been an impossible task. I am so grateful
         for his help. He also gave me some examples by other students to help me learn and use as reference, I did use some
         code but tried to limit this and modify for use with my app.
-            https://github.com/stephyraju/spiceworld
+            https://github.com/stephyraju/spiceworld<br>
             https://github.com/elenasacristan/CookBook
     * Paul Brennan, a friend of mine who was always at the end of the phone to help with some issues when needed.
 
